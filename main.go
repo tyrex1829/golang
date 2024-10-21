@@ -12,10 +12,17 @@ func main() {
 	// fmt.Println("Boolean: ", c)
 	// fmt.Println("String: ", d)
 
-	sum := 0
-	for i := 1; i < 3; i++ {
-		sum += i
-	}
+	// sum := 0
+	// for i := range 15 {
+	// 	sum += i
+	// }
 
-	println(sum)
+	// println(sum)
+
+	a := 3
+	if a%2 == 0 {
+		println("Even")
+	} else {
+		println("Odd")
+	}
 }
