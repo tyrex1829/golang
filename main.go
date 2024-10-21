@@ -26,14 +26,22 @@ func main() {
 	// 	println("Odd")
 	// }
 
-	gender := "male"
+	// gender := "male"
 
-	switch gender {
-	case "male":
-		println("Male")
-	case "female":
-		println("Female")
-	default:
-		println("You are either male or female")
+	// switch gender {
+	// case "male":
+	// 	println("Male")
+	// case "female":
+	// 	println("Female")
+	// default:
+	// 	println("You are either male or female")
+	// }
+
+	var a [5]int = [5]int{1, 2, 3, 4, 5}
+	sum := 0
+
+	for i := range a {
+		sum += a[i]
 	}
+	println(sum)
 }
