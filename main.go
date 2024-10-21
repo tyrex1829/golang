@@ -8,6 +8,12 @@ func sum (a, b int) (int, int) {
 	return a + b, a - b
 }
 
+func calculate (a, b int) (sum, sub int) {
+	sum = a + b
+	sub = a - b
+	return
+}
+
 func main() {
 	// const a int = 40
 	// const b float64 = 3.14
@@ -53,5 +59,8 @@ func main() {
 	// }
 	// println(sum)
 
-	fmt.Println(sum(2, 3))
+	// fmt.Println(sum(2, 3))
+
+	sum, sub := calculate(2, 3)
+	fmt.Println(sum, " ", sub)
 }
