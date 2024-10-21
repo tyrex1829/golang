@@ -4,8 +4,8 @@ import (
 	"fmt"
 )
 
-func sum (a int, b int) int {
-	return a + b
+func sum (a, b int) (int, int) {
+	return a + b, a - b
 }
 
 func main() {
