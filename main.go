@@ -4,14 +4,16 @@ import (
 	"fmt"
 )
 
-func sum (a, b int) (int, int) {
-	return a + b, a - b
+func sum (a, b int) (int) {
+	return a + b
 }
 
-func calculate (a, b int) (sum, sub int) {
-	sum = a + b
-	sub = a - b
-	return
+func sub (a, b int) (int) {
+	return a - b
+}
+
+func calculate (a, b int, fn func(int, int) int) int {
+	return fn(a, b)
 }
 
 func main() {
@@ -61,6 +63,14 @@ func main() {
 
 	// fmt.Println(sum(2, 3))
 
-	sum, sub := calculate(2, 3)
-	fmt.Println(sum, " ", sub)
+	// sum, sub := func(a, b int) (sum, sub int) {
+	// 	sum = a + b
+	// 	sub = a - b
+	// 	return
+	// }(2, 3)
+	// fmt.Println(sum, " ", sub)
+
+	ans := calculate(1, 2, sum)
+
+	fmt.Println(ans)
 }
