@@ -16,6 +16,12 @@ func calculate (a, b int, fn func(int, int) int) int {
 	return fn(a, b)
 }
 
+func multiplier (factor int) func (int) int {
+	return func(a int) int {
+		return a * factor
+	}
+}
+
 func main() {
 	// const a int = 40
 	// const b float64 = 3.14
@@ -70,7 +76,13 @@ func main() {
 	// }(2, 3)
 	// fmt.Println(sum, " ", sub)
 
-	ans := calculate(1, 2, sum)
+	// ans := calculate(1, 2, sum)
 
-	fmt.Println(ans)
+	// fmt.Println(ans)
+
+	double := multiplier(2)
+	triple := multiplier(3)
+
+	fmt.Println(double(3))
+	fmt.Println(triple(3))
 }
