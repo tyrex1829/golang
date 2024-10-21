@@ -1,5 +1,13 @@
 package main
 
+import (
+	"fmt"
+)
+
+func sum (a int, b int) int {
+	return a + b
+}
+
 func main() {
 	// const a int = 40
 	// const b float64 = 3.14
@@ -37,11 +45,13 @@ func main() {
 	// 	println("You are either male or female")
 	// }
 
-	var a [5]int = [5]int{1, 2, 3, 4, 5}
-	sum := 0
+	// var a [5]int = [5]int{1, 2, 3, 4, 5}
+	// sum := 0
 
-	for i := range a {
-		sum += a[i]
-	}
-	println(sum)
+	// for i := range a {
+	// 	sum += a[i]
+	// }
+	// println(sum)
+
+	fmt.Println(sum(2, 3))
 }
