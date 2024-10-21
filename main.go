@@ -19,10 +19,21 @@ func main() {
 
 	// println(sum)
 
-	a := 3
-	if a%2 == 0 {
-		println("Even")
-	} else {
-		println("Odd")
+	// a := 3
+	// if a%2 == 0 {
+	// 	println("Even")
+	// } else {
+	// 	println("Odd")
+	// }
+
+	gender := "male"
+
+	switch gender {
+	case "male":
+		println("Male")
+	case "female":
+		println("Female")
+	default:
+		println("You are either male or female")
 	}
 }
